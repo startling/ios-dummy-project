@@ -1,0 +1,13 @@
+machine:
+  environment:
+    XCODE_WORKSPACE: fake
+    XCODE_SCHEME: not-real
+
+dependencies:
+  override:
+    - echo no dependencies
+
+test:
+  override:
+    - ls ~/Library/Developer/CoreSimulator/Devices
+    - touch ~/Library/Developer/CoreSimulator/Devices/is-this-persistent
